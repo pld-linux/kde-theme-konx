@@ -16,7 +16,6 @@ BuildRequires:	automake
 BuildRequires:	freetype-devel
 BuildRequires:	kdelibs-devel
 BuildRequires:	unsermake
-Requires:	kdelibs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,7 +24,7 @@ This package contains a standard grey/light blue colorscheme.
 
 %description -l pl
 Konx to zupe³nie p³aski ale i wyra¼ny motyw oparty na dotNet z KDE.
-Ten pakiet zawiera standardowy czarno/jasnoniebieski schemat kolorów.
+Ten pakiet zawiera standardowy czarno-jasnoniebieski schemat kolorów.
 
 %package -n kde-style-%{_name}
 Summary:	KDE style - %{_name}
@@ -39,7 +38,6 @@ Konx is a completely flat and clean theme based on dotNet from KDE.
 %description -n kde-style-%{_name} -l pl
 Konx to zupe³nie p³aski ale i wyra¼ny motyw oparty na dotNet z KDE.
 
-
 %package -n kde-colorscheme-%{_name}
 Summary:	Color scheme for KDE style - %{_name}
 Summary(pl):	Schemat kolorów do stylu KDE - %{_name}
@@ -50,8 +48,7 @@ Requires:	kdebase-core
 This package contains a standard grey/light blue colorscheme.
 
 %description -n kde-colorscheme-%{_name} -l pl
-Ten pakiet zawiera standardowy czarno/jasnoniebieski schemat kolorów.
-
+Ten pakiet zawiera standardowy czarno-jasnoniebieski schemat kolorów.
 
 %prep
 %setup -q -n %{_name}-%{version}
@@ -69,8 +66,6 @@ export UNSERMAKE=%{_datadir}/unsermake/unsermake
 
 %install
 rm -rf $RPM_BUILD_ROOT
-# create dirs if necessary
-#install -d $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -85,7 +80,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/kde3/plugins/styles/*.la
 %attr(755,root,root) %{_libdir}/kde3/plugins/styles/*.so
 %{_datadir}/apps/kstyle/themes/*.themerc
-
 
 %files -n kde-colorscheme-%{_name}
 %defattr(644,root,root,755)
