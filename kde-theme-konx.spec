@@ -45,17 +45,15 @@ Group:		Themes
 Requires:	kdebase-core
 
 %description -n kde-colorscheme-%{_name}
-This package contains a standard grey/light blue colorscheme.
+This package contains a typical grey/light blue colorscheme.
 
 %description -n kde-colorscheme-%{_name} -l pl
-Ten pakiet zawiera standardowy czarno-jasnoniebieski schemat kolorów.
+Ten pakiet zawiera typowy czarno/jasnoniebieski schemat kolorów.
 
 %prep
 %setup -q -n %{_name}-%{version}
 
 %build
-kde_htmldir="%{_kdedocdir}"; export kde_htmldir
-kde_icondir="%{_iconsdir}"; export kde_icondir
 cp -f %{_datadir}/automake/config.sub admin
 export UNSERMAKE=%{_datadir}/unsermake/unsermake
 %{__make} -f Makefile.cvs
@@ -68,7 +66,8 @@ export UNSERMAKE=%{_datadir}/unsermake/unsermake
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	kde_htmldir="%{_kdedocdir}"
 
 %clean
 rm -rf $RPM_BUILD_ROOT
