@@ -16,6 +16,8 @@ BuildRequires:	automake
 BuildRequires:	freetype-devel
 BuildRequires:	kdelibs-devel
 BuildRequires:	unsermake
+Requires:	kde-style-%{_name}
+Requires:	kde-colorscheme-%{_name}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -72,6 +74,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%files
 
 %files -n kde-style-%{_name}
 %defattr(644,root,root,755)
