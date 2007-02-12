@@ -2,7 +2,7 @@
 %define		_name	konx
 
 Summary:	KDE theme - %{_name}
-Summary(pl):	Motyw KDE - %{_name}
+Summary(pl.UTF-8):   Motyw KDE - %{_name}
 Name:		kde-theme-%{_name}
 Version:	0.3
 Release:	1
@@ -24,33 +24,33 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Konx is a completely flat and clean theme based on dotNet from KDE.
 This package contains a standard grey/light blue colorscheme.
 
-%description -l pl
-Konx to zupe³nie p³aski ale i wyra¼ny motyw oparty na dotNet z KDE.
-Ten pakiet zawiera standardowy czarno-jasnoniebieski schemat kolorów.
+%description -l pl.UTF-8
+Konx to zupeÅ‚nie pÅ‚aski ale i wyraÅºny motyw oparty na dotNet z KDE.
+Ten pakiet zawiera standardowy czarno-jasnoniebieski schemat kolorÃ³w.
 
 %package -n kde-style-%{_name}
 Summary:	KDE style - %{_name}
-Summary(pl):	Styl do KDE - %{_name}
+Summary(pl.UTF-8):   Styl do KDE - %{_name}
 Group:		Themes
 Requires:	kdelibs
 
 %description -n kde-style-%{_name}
 Konx is a completely flat and clean theme based on dotNet from KDE.
 
-%description -n kde-style-%{_name} -l pl
-Konx to zupe³nie p³aski ale i wyra¼ny motyw oparty na dotNet z KDE.
+%description -n kde-style-%{_name} -l pl.UTF-8
+Konx to zupeÅ‚nie pÅ‚aski ale i wyraÅºny motyw oparty na dotNet z KDE.
 
 %package -n kde-colorscheme-%{_name}
 Summary:	Color scheme for KDE style - %{_name}
-Summary(pl):	Schemat kolorów do stylu KDE - %{_name}
+Summary(pl.UTF-8):   Schemat kolorÃ³w do stylu KDE - %{_name}
 Group:		Themes
 Requires:	kdebase-core
 
 %description -n kde-colorscheme-%{_name}
 This package contains a typical grey/light blue colorscheme.
 
-%description -n kde-colorscheme-%{_name} -l pl
-Ten pakiet zawiera typowy czarno/jasnoniebieski schemat kolorów.
+%description -n kde-colorscheme-%{_name} -l pl.UTF-8
+Ten pakiet zawiera typowy czarno/jasnoniebieski schemat kolorÃ³w.
 
 %prep
 %setup -q -n %{_name}-%{version}
