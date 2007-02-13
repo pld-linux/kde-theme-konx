@@ -2,7 +2,7 @@
 %define		_name	konx
 
 Summary:	KDE theme - %{_name}
-Summary(pl.UTF-8):   Motyw KDE - %{_name}
+Summary(pl.UTF-8):	Motyw KDE - %{_name}
 Name:		kde-theme-%{_name}
 Version:	0.3
 Release:	1
@@ -30,7 +30,7 @@ Ten pakiet zawiera standardowy czarno-jasnoniebieski schemat kolorów.
 
 %package -n kde-style-%{_name}
 Summary:	KDE style - %{_name}
-Summary(pl.UTF-8):   Styl do KDE - %{_name}
+Summary(pl.UTF-8):	Styl do KDE - %{_name}
 Group:		Themes
 Requires:	kdelibs
 
@@ -42,7 +42,7 @@ Konx to zupełnie płaski ale i wyraźny motyw oparty na dotNet z KDE.
 
 %package -n kde-colorscheme-%{_name}
 Summary:	Color scheme for KDE style - %{_name}
-Summary(pl.UTF-8):   Schemat kolorów do stylu KDE - %{_name}
+Summary(pl.UTF-8):	Schemat kolorów do stylu KDE - %{_name}
 Group:		Themes
 Requires:	kdebase-core
 
